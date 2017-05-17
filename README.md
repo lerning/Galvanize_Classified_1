@@ -49,12 +49,12 @@ You need to create routes, seed data and migrations for the following object.
 
 ```text
 ┌──────────────────────────────────────────────────────────────────────────────────────────┐
-│                                          classified                                        │
+│                                          classifieds                                     │
 ├─────────────┬─────────────────────────┬──────────────────────────────────────────────────┤
 │id           │serial                   │primary key                                       │
 |title        │varchar(255)             │not null                                          │
-|description  │varchar(255)             │not null      
-|price        │decimal                  │not null      
+|description  │varchar(255)             │not null                                          │      
+|price        │decimal                  │not null                                          │    
 |item_image   │varchar(255)             │not null                                          │
 │created_at   │timestamp with time zone │not null default now()                            │
 │updated_at   │timestamp with time zone │not null default now()                            │
