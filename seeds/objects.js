@@ -21,5 +21,8 @@ exports.seed = function(knex, Promise) {
          created_at: new Date ('2016-06-26T14:26:16.000Z'),
          updated_at: new Date ('2016-06-26T14:26:16.000Z')
       }]);
-    });
+    })
+    .then(() => {
+        return knex.raw("SELECT setval('classifieds_id_seq', (SELECT MAX(id) FROM classifieds));")
+      })
 };

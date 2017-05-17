@@ -24,4 +24,14 @@ router.get('/:id', (req, res) => {
       })
    })
 
+   router.post('/', (req, res) => {
+      knex('classifieds')
+         .insert(req.body)
+         .returning(['id','description', 'title', 'price', 'item_image'])
+         .then((object) => {
+            res.send(object[0])
+         })
+
+   })
+
 module.exports = router;
